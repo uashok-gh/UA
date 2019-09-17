@@ -1,0 +1,64 @@
+node {
+    def String region
+    def String username
+    def String password
+    def String releaseVersion
+    def String utilHome
+    def String gitWorkspace
+    def String orgLogin
+    
+    stage('Preparation') {
+        utilHome = 'C:/Utilities/Jenkins/Scripts/IICS Asset Management Utility'
+    
+        if (params.SourceDetails == "PROD") {
+            orgLogin = "prod_login"
+            region = "us"
+        } else if (params.SourceDetails == "QA") {
+            orgLogin = "qa_login"
+            region = "us"
+        } else if (params.SourceDetails == "DEV") {
+            orgLogin = "dev_login"
+            region = "us"
+        } else {
+            orgLogin = "prod_login"
+            region = "us"
+        }
+    
+        withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: "${orgLogin}", usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+            username = env.USERNAME
+            password = env.PASSWORD
+        }
+    
+        releaseVersion = params.ReleaseVersion
+        gitWorkspace = params.GitWorkspace
+        git url: params.GitStore, credentialsId: 'jenkins_ssh_key', branch: 'master'
+        bat label: 'Get the latest code from Git', script: 'git fetch origin'
+        bat label: 'Reset the local repository', script: 'git reset --hard origin/master'
+    }
+   
+   stage('List') {
+      dir ("${utilHome}")
+      {
+          bat label: 'List the IICS assets based on tag filter', returnStdout: true, script: "iics.exe list --region ${region} --username ${username} --password ${password} --query tag==${releaseVersion} --outputFile output.${releaseVersion}.lst"
+      }
+   }
+   stage('Export') {
+      dir ("${utilHome}")
+      {
+          bat label: 'Export the IICS assets listed as part of List operation', returnStdout: true, script: "iics.exe export --region ${region} --username ${username} --password ${password} --artifactsFile output.${releaseVersion}.lst --zipFilePath exportZIP/export_${releaseVersion}.zip --sync true"
+      }
+   }
+   stage('Extract') {
+      dir ("${utilHome}")
+      {
+          bat label: '', returnStdout: true, script: "iics.exe extract -z exportZIP/export_${releaseVersion}.zip -w ${gitWorkspace}"
+      }
+   }
+   stage('VersionControl') {
+       bat label: 'Add to commit to local repository', script: 'git add -A'
+       bat label: 'Commit changes to local repository', script: 'git commit -am "Merge changes to master'
+       bat label: 'Push changes to remote repository master branch', script: "git push ${gitStore} master:master"
+       bat label: 'Add the release tag if does not exist already', script: "git ls-remote --exit-code --tags origin ${releaseVersion} || git tag -a ${releaseVersion} -m NewRelease"
+       bat label: 'Push the tags to remote repository', script: "git push ${gitStore} ${releaseVersion}"
+    }
+}

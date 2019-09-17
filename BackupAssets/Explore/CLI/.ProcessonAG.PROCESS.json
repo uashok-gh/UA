@@ -1,0 +1,24 @@
+[
+   {
+      "objectGuid": "6xImEBrmnkCceCqNvsDdwL",
+      "objectName": "ProcessonAG",
+      "objectType": "PROCESS",
+      "path": "/Explore/CLI",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "4oDdvrTdtqSLlBW-gt-86241548-2019-09-10T18:36:10.901Z::pd.xml"
+         }
+      }
+   }
+]

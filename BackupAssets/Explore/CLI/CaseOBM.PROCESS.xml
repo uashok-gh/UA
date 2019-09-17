@@ -1,0 +1,91 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>cki8MZgpDqotxGo-gt-35494167-2019-09-16T19:16:26.042Z::pd.xml</types1:EntryId>
+      <types1:Name>CaseOBM</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo>Salesforce:Case</types1:AppliesTo>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>uashok@cspi.com</types1:CreatedBy>
+      <types1:CreationDate>2019-09-16T19:16:26Z</types1:CreationDate>
+      <types1:ModifiedBy>uashok@cspi.com</types1:ModifiedBy>
+      <types1:ModificationDate>2019-09-16T19:43:48Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>uashok@cspi.com</types1:PublishedBy>
+      <types1:PublicationDate>2019-09-16T19:43:54Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.CaseOBM/CaseOBM.pd.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="CaseOBM"
+                  name="CaseOBM">
+            <appliesTo>Salesforce:Case</appliesTo>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="CaseType" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="CaseDescription" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="" name="cmt" type="reference">
+                  <options>
+                     <option name="referenceTo">Salesforce:CaseComment</option>
+                     <option name="required">false</option>
+                     <option name="guid">7GrUoN7Futuf7sTxTkWFun</option>
+                  </options>
+               </field>
+               <field description="" name="CommentText" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest/>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="k0msglqp" targetId="k0msglqo"/>
+               </start>
+               <assignment id="k0msglqo">
+                  <title>Assignment to CaseType, CaseDescription</title>
+                  <operation source="field" to="output.CaseType">Type</operation>
+                  <operation source="field" to="output.CaseDescription">Description</operation>
+                  <link id="k0msglr3" targetId="k0msglr2"/>
+               </assignment>
+               <assignment id="k0msglr2">
+                  <title>Assignment to cmt</title>
+                  <operation source="query" to="output.cmt">
+                     <query from="Salesforce:CaseComment">
+                        <where>ParentId = '{$Id}'</where>
+                     </query>
+                  </operation>
+                  <link id="k0msu0u6" targetId="k0msu0u5"/>
+               </assignment>
+               <assignment id="k0msu0u5">
+                  <title>Assignment to CommentText</title>
+                  <operation source="field" to="output.CommentText">output.cmt.CommentBody</operation>
+                  <link id="k0msu0u7" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>gGDRYeaJ8uNfaxwuFMF6SE</types1:GUID>
+      <types1:DisplayName>CaseOBM</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-09-17T04:26:59.993Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

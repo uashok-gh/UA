@@ -1,0 +1,48 @@
+[
+   {
+      "objectGuid": "gGDRYeaJ8uNfaxwuFMF6SE",
+      "objectName": "CaseOBM",
+      "objectType": "PROCESS",
+      "path": "/Explore/CLI",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [
+            "7GrUoN7Futuf7sTxTkWFun"
+         ],
+         "repoInfo": {
+            "repoHandle": "cki8MZgpDqotxGo-gt-35494167-2019-09-16T19:16:26.042Z::pd.xml"
+         }
+      }
+   },
+   {
+      "objectGuid": "7GrUoN7Futuf7sTxTkWFun",
+      "objectName": "Salesforce",
+      "objectType": "AI_CONNECTION",
+      "path": "/Explore/Default",
+      "metadata": {
+         "additionalInfo": {
+            "contentType": "application/json; charset=utf-8",
+            "description": "Informatica Cloud Real Time - Guide Setup created this Salesforce connection. Enter proper password and security token if you want to use this connection outside of Salesforce.\n\nSFDC ID: 00D61000000KJtw\nuashok@infa.rt.com/Informatica@1\n\nSynced on Apr30. if you sync this, this will reflect in the guidesetup tab.",
+            "documentState": "VALID"
+         },
+         "contextAttributes": null,
+         "modelVersion": {
+            "major": 1,
+            "minor": 0
+         },
+         "objectRefs": [],
+         "repoInfo": {
+            "repoHandle": "ieMHck5qbbfUryz-gt27857536-2014-08-13T19:23:34.144Z::conn.xml"
+         }
+      }
+   }
+]
