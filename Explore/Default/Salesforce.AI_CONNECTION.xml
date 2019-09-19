@@ -1,0 +1,71 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>ieMHck5qbbfUryz-gt27857536-2014-08-13T19:23:34.144Z::conn.xml</types1:EntryId>
+      <types1:Name>Salesforce</types1:Name>
+      <types1:ParentFlowIds>ZL8yAzbdtqSLlBW-gt-2113234-2019-08-19T15:36:43.828Z::gt.xml,KAWy0CR3aaa-gt-341628886-2019-04-30T17:08:48.586Z::pd.xml,0CR3aaa-gt-558710-2015-03-16T17:36:52.992Z::gt.xml,EnPCOkSSHCwkNmu-gt-1653562-2015-01-28T20:21:09.749Z::gt.xml,HO1qhPVEQrXhNUd-gt-284282579-2019-07-04T14:53:06.153Z::pd.xml,3A1vyoY2G7QnG5Y-gt-46695627-2019-05-13T19:02:50.874Z::pd.xml,BxZmtK9hCHbf2XZ-gt-7632323-2019-07-04T19:55:59.451Z::gt.xml,4JsJGD4ARW8UBM7-gt-233644292-2019-08-09T20:29:52.903Z::gt.xml,f1J2mi0UuDppppp-gt-89195075-2019-08-19T15:36:23.092Z::gt.xml,5JlJjx9AWbg0ZkL-gt-276214228-2019-04-30T16:29:35.914Z::gt.xml,jH4oDdvrTdtqSLl-gt-116063140-2019-08-19T15:32:15.159Z::gt.xml,cki8MZgpDqotxGo-gt-35494167-2019-09-16T19:16:26.042Z::pd.xml,cjumf6S3wOLIFvu-gt-136824207-2019-06-19T13:18:58.039Z::gt.xml,854lp6oIuQaaabc-gt-6779061-2018-10-19T22:07:39.58Z::pd.xml,yWuNciZBpDUQbgd-gt-4112197-2015-09-24T20:02:11.397Z::gt.xml,WglH8n55ErhNzUz-gt-116069527-2019-08-19T15:32:55.775Z::gt.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>Informatica Cloud Real Time - Guide Setup created this Salesforce connection. Enter proper password and security token if you want to use this connection outside of Salesforce.
+
+SFDC ID: 00D61000000KJtw
+uashok@infa.rt.com/Informatica@1
+
+Synced on Apr30. if you sync this, this will reflect in the guidesetup tab.</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>rms@test.org</types1:CreatedBy>
+      <types1:CreationDate>2014-08-13T19:23:34Z</types1:CreationDate>
+      <types1:ModifiedBy>uashok@cspi.com</types1:ModifiedBy>
+      <types1:ModificationDate>2019-09-16T19:15:10Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>uashok@cspi.com</types1:PublishedBy>
+      <types1:PublicationDate>2019-09-16T19:16:18Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connection/Salesforce/Salesforce.conn.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="Salesforce"
+                     label="Salesforce"
+                     name="Salesforce">
+            <description>Informatica Cloud Real Time - Guide Setup created this Salesforce connection. Enter proper password and security token if you want to use this connection outside of Salesforce.
+
+SFDC ID: 00D61000000KJtw
+uashok@infa.rt.com/Informatica@1
+
+Synced on Apr30. if you sync this, this will reflect in the guidesetup tab.</description>
+            <tags/>
+            <agent/>
+            <attributes/>
+            <soaConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                          connectorPath="project:/com.activevos.cumulus.cloud.extend.playbook.configuration/config/sfConnector.xml"
+                          name="Salesforce"
+                          supportsConnectionTest="true"
+                          supportsOData="true"
+                          uuid="05fc48f1-e6e1-441b-b700-bac396ca2ed1">
+               <description>Salesforce.com SOA based data connector.</description>
+            </soaConnector>
+            <odata>
+               <enabled>true</enabled>
+            </odata>
+            <authentication type="$infa_basicform">
+               <attributes>
+                  <attribute encrypted="false" name="username" value="uashok@infa.rt.com"/>
+                  <attribute encrypted="true" name="password" value=""/>
+                  <attribute encrypted="true" name="token" value=""/>
+                  <attribute encrypted="false"
+                             name="serviceUrl"
+                             value="https://login.salesforce.com/services/Soap/c/42.0"/>
+                  <attribute encrypted="true" name="clientId" value=""/>
+                  <attribute encrypted="true" name="clientSecret" value=""/>
+               </attributes>
+            </authentication>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>7GrUoN7Futuf7sTxTkWFun</types1:GUID>
+      <types1:DisplayName>Salesforce</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-09-19T21:08:18.084Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

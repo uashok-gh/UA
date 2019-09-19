@@ -1,0 +1,247 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>ZL8yAzbdtqSLlBW-gt-2113234-2019-08-19T15:36:43.828Z::gt.xml</types1:EntryId>
+      <types1:Name>PlanUSADate_-_v5</types1:Name>
+      <types1:MimeType>application/xml+screenflow</types1:MimeType>
+      <types1:Description>Hello, this is a PlanUSA date v5</types1:Description>
+      <types1:AppliesTo>Salesforce:Case</types1:AppliesTo>
+      <types1:Tags>.alwaysnew,date</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>uashok@cspi.com</types1:CreatedBy>
+      <types1:CreationDate>2019-08-19T15:36:44Z</types1:CreationDate>
+      <types1:ModifiedBy>uashok@cspi.com</types1:ModifiedBy>
+      <types1:ModificationDate>2019-08-19T15:37:24Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>uashok@cspi.com</types1:PublishedBy>
+      <types1:PublicationDate>2019-08-19T15:37:34Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/sf.PlanUSADate___v5/PlanUSADate___v5.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <avosScreenflow xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                         xmlns:list="urn:activevos:spi:list:functions"
+                         allowRestart="true"
+                         displayName="PlanUSADate - v5"
+                         doneOnEndStep="true"
+                         name="PlanUSADate_-_v5"
+                         runAsUser="$system">
+            <description>Hello, this is a PlanUSA date v5</description>
+            <appliesTo>Salesforce:Case</appliesTo>
+            <tags>.alwaysnew,date</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <input>
+               <parameter description="" name="i_Case" required="false" type="reference">
+                  <options>
+                     <option name="referenceTo">Salesforce:Case</option>
+                     <option name="required">false</option>
+                     <option name="guid">7GrUoN7Futuf7sTxTkWFun</option>
+                  </options>
+               </parameter>
+            </input>
+            <output>
+               <field description="null" name="o_AccountID" type="reference">
+                  <options>
+                     <option name="referenceTo">Salesforce:Account</option>
+                     <option name="required">false</option>
+                     <option name="guid">7GrUoN7Futuf7sTxTkWFun</option>
+                  </options>
+               </field>
+            </output>
+            <tempFields>
+               <field description="null" name="tmpLastNametoSearch" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpFirstNametoSearch" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpSSNLastFourtoSearch" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpBirthdate" type="datetime">
+                  <options>
+                     <option name="thirtyMinutesIncrement">true</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpState" type="picklist">
+                  <options>
+                     <option name="values">[{"label":"AL","value":"AL"},{"label":"AK","value":"AK"},{"label":"AZ","value":"AZ"},{"label":"AR","value":"AR"},{"label":"CA","value":"CA"},{"label":"CO","value":"CO"},{"label":"CT","value":"CT"},{"label":"DE","value":"DE"},{"label":"FL","value":"FL"},{"label":"GA","value":"GA"},{"label":"HI","value":"HI"},{"label":"ID","value":"ID"},{"label":"IL","value":"IL"},{"label":"IN","value":"IN"},{"label":"IA","value":"IA"},{"label":"KS","value":"KS"},{"label":"KY","value":"KY"},{"label":"LA","value":"LA"},{"label":"ME","value":"ME"},{"label":"MD","value":"MD"},{"label":"MA","value":"MA"},{"label":"MI","value":"MI"},{"label":"MN","value":"MN"},{"label":"MS","value":"MS"},{"label":"MO","value":"MO"},{"label":"MT","value":"MT"},{"label":"NE","value":"NE"},{"label":"NV","value":"NV"},{"label":"NH","value":"NH"},{"label":"NJ","value":"NJ"},{"label":"NM","value":"NM"},{"label":"NY","value":"NY"},{"label":"NC","value":"NC"},{"label":"ND","value":"ND"},{"label":"OH","value":"OH"},{"label":"OK","value":"OK"},{"label":"OR","value":"OR"},{"label":"PA","value":"PA"},{"label":"RI","value":"RI"},{"label":"SC","value":"SC"},{"label":"SD","value":"SD"},{"label":"TN","value":"TN"},{"label":"TX","value":"TX"},{"label":"UT","value":"UT"},{"label":"VT","value":"VT"},{"label":"VA","value":"VA"},{"label":"WA","value":"WA"},{"label":"WV","value":"WV"},{"label":"WI","value":"WI"},{"label":"WY","value":"WY"}]</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpDuplicatesFound" type="boolean">
+                  <options>
+                     <option name="defaultvalue">false</option>
+                     <option name="boolean_show_as">checkbox</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpApplicantFound" type="reference">
+                  <options>
+                     <option name="referenceTo">Salesforce:Account</option>
+                     <option name="required">false</option>
+                     <option name="guid">7GrUoN7Futuf7sTxTkWFun</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpCustomerIDtoSearch" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpSSNFirstThree" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpSSNSecondTwo" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpSSNLength" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpCity" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpZip" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpGender" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpMaritalStatus" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpStreet" type="textarea">
+                  <options>
+                     <option name="text_width">100</option>
+                     <option name="text_height">5</option>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpPhone" type="phone">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpMobile" type="phone">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpEmail" type="email">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpApplicantType" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpDateLength" type="int">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+               <field description="null" name="tmpDiagnosis" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </tempFields>
+            <runOn target="desktop"/>
+            <notes/>
+            <deployment/>
+            <sendFeedback>
+               <emailTo/>
+            </sendFeedback>
+            <flow>
+               <startScreen id="i5zegmga">
+                  <title>Start</title>
+                  <body contentType="text/html"/>
+                  <actions>
+                     <action alt="null" id="i5zegmga_jcc27o4a" targetScreen="jcc27o4a">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="true"/>
+               </startScreen>
+               <screen id="i7wdx70t">
+                  <title>Display case created date</title>
+                  <body contentType="text/html">&lt;p&gt;&lt;input style="-moz-appearance: none; background-color: lightgrey; border: none;" name="CreatedDate" readonly="readonly" type="text" value="Created Date"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Current date:&amp;nbsp; &lt;input style="-moz-appearance: none; background-color: lightgrey; border: none;" title="tmpBirthdate (temporary)" name="temp.tmpBirthdate" readonly="readonly" type="text" value="tmpBirthdate (temporary)"&gt;&amp;nbsp;&lt;/p&gt;</body>
+                  <actionPrompt/>
+                  <actions>
+                     <action alt="null" id="i7wdx70t_i7wdx717" targetScreen="i7wdx717">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+                  <screenData skipIfRequiredFilled="false">
+                     <screenDataItem name="CreatedDate"
+                                     readonly="true"
+                                     required="false"
+                                     type="datetime">
+                        <options>
+                           <option name="thirtyMinutesIncrement">true</option>
+                           <option name="required">false</option>
+                        </options>
+                     </screenDataItem>
+                     <screenDataItem name="temp.tmpBirthdate"
+                                     readonly="true"
+                                     required="false"
+                                     type="datetime">
+                        <options>
+                           <option name="thirtyMinutesIncrement">true</option>
+                           <option name="required">false</option>
+                        </options>
+                     </screenDataItem>
+                  </screenData>
+               </screen>
+               <endScreen id="i7wdx717">
+                  <title/>
+                  <body contentType="text/html"/>
+                  <redirectTo type="current_object"/>
+                  <screenActionLabel>
+                     <text>Done</text>
+                  </screenActionLabel>
+               </endScreen>
+               <assignment id="jcc27o4a">
+                  <title>Assignment to tmpBirthdate</title>
+                  <operation source="formula" to="temp.tmpBirthdate">
+                     <expression language="XQuery">fn:current-dateTime()</expression>
+                  </operation>
+                  <actions>
+                     <action alt="null" id="jcc27o4a_i7wdx70t" targetScreen="i7wdx70t">
+                        <text>Continue</text>
+                     </action>
+                  </actions>
+               </assignment>
+            </flow>
+         </avosScreenflow>
+      </types1:Entry>
+      <types1:GUID>09soZgbUNkpkTpacW46jCF</types1:GUID>
+      <types1:DisplayName>PlanUSADate - v5</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2019-09-19T21:08:18.171Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
